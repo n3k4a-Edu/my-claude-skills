@@ -20,7 +20,10 @@ foreach ($dir in Get-ChildItem -LiteralPath (Join-Path $Repo 'skills') -Director
     $target = Join-Path $Claude "skills\$($dir.Name)"
     $item = Get-Item -LiteralPath $target -Force -ErrorAction SilentlyContinue
     if ($item -and $item.LinkType -eq 'Junction' -and ($item.Target -contains $dir.FullName)) { continue }
-    if ($item) { Save-Backup $target }
+    if ($item -and $item.LinkType) {
+        # rmdir on a junction removes only the link, never the folder it points to
+        cmd /c rmdir "$target" | Out-Null
+    } elseif ($item) { Save-Backup $target }
     New-Item -ItemType Junction -Path $target -Target $dir.FullName | Out-Null
     Write-Host "  linked $($dir.Name)"
 }
@@ -44,15 +47,21 @@ $settings = if (Test-Path $settingsPath) { Get-Content $settingsPath -Raw -Encod
 if (-not $settings.PSObject.Properties['hooks']) { $settings | Add-Member -NotePropertyName hooks -NotePropertyValue ([pscustomobject]@{}) }
 if (-not $settings.hooks.PSObject.Properties['SessionStart']) { $settings.hooks | Add-Member -NotePropertyName SessionStart -NotePropertyValue @() }
 $present = @($settings.hooks.SessionStart | ForEach-Object { $_.hooks } | Where-Object { $_.command -like '*detect-project.ps1*' })
-if ($present.Count -gt 0) {
+if (($present.Count -eq 1) -and ($present[0].command -eq $command)) {
     Write-Host '  already installed'
 } else {
     if (Test-Path $settingsPath) { Copy-Item $settingsPath (Join-Path $Claude "settings.json.bak-$Stamp") }
-    $entry = [pscustomobject]@{ hooks = @([pscustomobject]@{ type = 'command'; command = $command }) }
-    $settings.hooks.SessionStart = @($settings.hooks.SessionStart) + $entry
+    if ($present.Count -gt 0) {
+        # the repo moved: point the existing hook at the new path
+        foreach ($h in $present) { $h.command = $command }
+        Write-Host '  updated to new path'
+    } else {
+        $entry = [pscustomobject]@{ hooks = @([pscustomobject]@{ type = 'command'; command = $command }) }
+        $settings.hooks.SessionStart = @($settings.hooks.SessionStart) + $entry
+        Write-Host '  installed'
+    }
     $json = $settings | ConvertTo-Json -Depth 64
     [IO.File]::WriteAllText($settingsPath, $json, (New-Object Text.UTF8Encoding $false))
-    Write-Host '  installed'
 }
 
 if (-not $SkipPlugins) {

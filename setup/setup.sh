@@ -13,7 +13,8 @@ echo "== Skills"
 for dir in "$REPO"/skills/*/; do
   name="$(basename "$dir")"; target="$CLAUDE/skills/$name"
   if [ -L "$target" ] && [ "$(readlink "$target")" = "${dir%/}" ]; then continue; fi
-  if [ -e "$target" ] || [ -L "$target" ]; then mkdir -p "$BACKUP"; mv "$target" "$BACKUP/"; echo "  backed up $name"; fi
+  if [ -L "$target" ]; then rm "$target"
+  elif [ -e "$target" ]; then mkdir -p "$BACKUP"; mv "$target" "$BACKUP/"; echo "  backed up $name"; fi
   ln -s "${dir%/}" "$target"; echo "  linked $name"
 done
 
@@ -28,14 +29,20 @@ import json, os, shutil, sys, time
 path, cmd = sys.argv[1], sys.argv[2]
 s = json.load(open(path)) if os.path.exists(path) else {}
 starts = s.setdefault("hooks", {}).setdefault("SessionStart", [])
-if any("detect-project" in h.get("command", "") for e in starts for h in e.get("hooks", [])):
+present = [h for e in starts for h in e.get("hooks", []) if "detect-project" in h.get("command", "")]
+if len(present) == 1 and present[0]["command"] == cmd:
     print("  already installed")
 else:
     if os.path.exists(path):
         shutil.copy(path, path + ".bak-" + time.strftime("%Y%m%d-%H%M%S"))
-    starts.append({"hooks": [{"type": "command", "command": cmd}]})
-    json.dump(s, open(path, "w"), indent=2)
-    print("  installed")
+    if present:
+        for h in present:
+            h["command"] = cmd
+        print("  updated to new path")
+    else:
+        starts.append({"hooks": [{"type": "command", "command": cmd}]})
+        print("  installed")
+    json.dump(s, open(path, "w"), indent=2, ensure_ascii=False)
 PY
 
 if [ "${1:-}" != "--skip-plugins" ]; then

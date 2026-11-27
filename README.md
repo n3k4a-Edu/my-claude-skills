@@ -9,12 +9,12 @@ My Claude setup in one repo: my own skills, a curated library of 270 skills that
 
    Windows:
    ```powershell
-   git clone https://github.com/n3k4a-Edu/my-claude-skills.git $HOME\my-claude-skills
-   powershell -ExecutionPolicy Bypass -File $HOME\my-claude-skills\setup\setup.ps1
+   git clone https://github.com/n3k4a-Edu/my-claude-skills.git $HOME\.claude\my-claude-skills
+   powershell -ExecutionPolicy Bypass -File $HOME\.claude\my-claude-skills\setup\setup.ps1
    ```
    macOS / Linux:
    ```bash
-   git clone https://github.com/n3k4a-Edu/my-claude-skills.git ~/my-claude-skills && bash ~/my-claude-skills/setup/setup.sh
+   git clone https://github.com/n3k4a-Edu/my-claude-skills.git ~/.claude/my-claude-skills && bash ~/.claude/my-claude-skills/setup/setup.sh
    ```
 3. Restart Claude. Re-authorize MCP servers that need a sign-in with `/mcp`, and install any desktop tools you use there (IDA, Cheat Engine, Blender, Strix CLI).
 
