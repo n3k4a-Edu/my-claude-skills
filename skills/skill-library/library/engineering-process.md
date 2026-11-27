@@ -28,6 +28,22 @@ Open a skill with `skills/<name>/INSTRUCTIONS.md` (relative to this folder).
 - **opensource-pipeline** — Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for…
 - **documentation-lookup** — Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma). _(needs: Context7 MCP (authorize via /mcp))_
 - **council** — Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing. _(needs: Subagents (Claude Code only); Claude Code only)_
+- **coding-standards** — Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns. Use when reviewing code quality or…
+- **conventional-commit-review** — Reviews staged changes and drafts a Conventional Commits-compliant commit message with the right type, scope, and length. Use before committing, or when the user asks to write, fix, or review a commit message.
+- **safety-guard** — Guard against destructive operations with three modes: Careful intercepts dangerous commands (rm -rf, git push --force, DROP TABLE) for confirmation, Freeze locks writes to one directory, and Guard combines both.…
+- **living-docs-governance** — Keep a long-lived project's documentation from rotting by assigning existing project docs clear constitution, map, status, and history roles, then wiring the active agent harness to those canonical sources. Use in the…
+- **dev-team** — Simulate a collaborative dev team session where multiple role-based personas (PM, Architect, Developer, QA) respond to the same problem together in one session. Use when designing a feature, reviewing a proposal, or…
+- **grill-me** — A relentless interview to sharpen a plan or design.
+- **grill-with-docs** — A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+- **pr** — Use when writing a PR body.
+- **setup-matt-pocock-skills** — Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills. _(Claude Code only)_
+- **to-spec** — Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed. _(needs: An issue tracker, configured once per repo with setup-matt-pocock-skills; Claude Code only)_
+- **to-tickets** — Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native… _(needs: An issue tracker, configured once per repo with setup-matt-pocock-skills; Claude Code only)_
+- **implement-spec** — Implement the result of /to-spec and /to-tickets in code. _(needs: An issue tracker, configured once per repo with setup-matt-pocock-skills; Claude Code only)_
+- **triage** — Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs. _(needs: An issue tracker, configured once per repo with setup-matt-pocock-skills; Claude Code only)_
+- **wayfinder** — Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. _(needs: An issue tracker, configured once per repo with setup-matt-pocock-skills; Claude Code only)_
+- **ponytail-debt** — List every `shortcut:` comment (and older `ponytail:` ones) as a debt ledger. One-shot report, changes nothing. Use for "ponytail debt", "what did ponytail defer", "list the shortcuts", /ponytail-debt.
+- **ponytail-help** — Quick reference for ponytail levels, skills and commands. One-shot display. Use for /ponytail-help, "ponytail help", "how do I use ponytail".
 
 ## Plugin skills (Claude Code: invoke with the Skill tool when it lists them)
 

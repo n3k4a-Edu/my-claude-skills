@@ -9,6 +9,7 @@ Open a skill with `skills/<name>/INSTRUCTIONS.md` (relative to this folder).
 - **to-questionnaire** — Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
 - **wait-what** — Stop. That last message did not land: re-pitch it.
 - **writing-for-agents** — Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.
+- **visa-doc-translate** — Translate visa document images (bank deposit, employment, income, and retirement certificates; HEIC, PNG, or JPG) into English via OCR and produce a bilingual PDF pairing the original image with a formatted… _(needs: OCR tooling (see the skill))_
 
 ## Account skills (available wherever the user is signed in)
 

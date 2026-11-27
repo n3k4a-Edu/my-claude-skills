@@ -38,7 +38,7 @@ This applies whenever the request involves any of:
 
 ## Skill Library (picks the skills for every project)
 
-Beyond the skills loaded in the session, ~270 curated skills live in the **`skill-library`** skill and load only when needed. For any project or task that is more than a one-line change, and again whenever the work moves to a new phase (plan → build → test → secure → launch), invoke `skill-library` and follow its recipe. It reads the project's stack, maps each phase to skills, and loads the best ones. The tables below say who leads each job; the library fills everything they do not cover (framework patterns, databases, mobile, DevOps, marketing detail, and more).
+Beyond the skills loaded in the session, ~350 curated skills live in the **`skill-library`** skill and load only when needed. For any project or task that is more than a one-line change, and again whenever the work moves to a new phase (plan → build → test → secure → launch), invoke `skill-library` and follow its recipe. It reads the project's stack, maps each phase to skills, and loads the best ones. The tables below say who leads each job; the library fills everything they do not cover (framework patterns, databases, mobile, DevOps, marketing detail, and more).
 
 ## Security & Code Quality
 

@@ -13,6 +13,7 @@ Open a skill with `skills/<name>/INSTRUCTIONS.md` (relative to this folder).
 - **vite-patterns** — Vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or…
 - **bun-runtime** — Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.
 - **typescript-patterns** — TypeScript patterns for strict, type-safe, maintainable code in modern TypeScript and JavaScript applications. Covers strict compiler configuration, type design, narrowing, discriminated unions, generics, async and…
+- **migrate-to-shoehorn** — Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.
 
 ## Plugin skills (Claude Code: invoke with the Skill tool when it lists them)
 

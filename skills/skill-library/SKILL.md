@@ -1,11 +1,11 @@
 ---
 name: skill-library
-description: Use when starting any project or task, when the work enters a new phase (planning, building, testing, securing, shipping, marketing), or when no loaded skill clearly fits. Covers frontend and UI, web frameworks, backend languages, mobile, databases, DevOps and networking, testing, security and pentesting, reverse engineering, games and 3D, AI agents and ML, marketing and SEO, business and product, video, documents, and writing. Use also when the user asks which skill fits, or names a skill that is not loaded.
+description: Use when starting any project or task, when the work enters a new phase (planning, building, testing, securing, shipping, marketing), or when no loaded skill clearly fits. Covers frontend and UI, web frameworks, backend languages, mobile, databases, DevOps and networking, testing, security and pentesting, reverse engineering, games and 3D, AI agents and ML, marketing and SEO, business and product, industry domains and scientific research, video, documents, and writing. Use also when the user asks which skill fits, or names a skill that is not loaded.
 ---
 
 # Skill Library
 
-This is a library of 270 curated skills, plus an index of the plugin and account skills. Nothing loads until you pick it. Picking well matters more than picking many: one skill that names the user's exact stack and goal beats five generic ones.
+This is a library of 350 curated skills, plus an index of the plugin and account skills. Nothing loads until you pick it. Picking well matters more than picking many: one skill that names the user's exact stack and goal beats five generic ones.
 
 Every path below starts at `library/` inside this skill's base directory. For example, a skill's instructions live at `<base>/library/skills/<name>/INSTRUCTIONS.md`.
 
@@ -54,6 +54,7 @@ If there is no project folder, take the stack and goal from the request alone. I
 | AI agents, LLM features, MCP servers, ML | `ai-agents-ml.md` |
 | Video, demos, watching a video | `media-video.md` |
 | Documents (docx, pptx, xlsx, pdf), writing quality | `writing-thinking.md` |
+| Industry work (logistics, trade, energy, manufacturing, healthcare, contracts), scientific or patent research | `industry-research.md` |
 
 Read `INDEX.md`, then open only the files this mapping points to. Each file lists library skills first, then plugin skills and account skills for the same area.
 

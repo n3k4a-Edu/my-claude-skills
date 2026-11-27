@@ -1,6 +1,6 @@
 # my-claude-skills
 
-My Claude setup in one repo: my own skills, a curated library of 270 skills that loads on demand, global CLAUDE.md routing, a project-detection hook, and the list of plugins to install.
+My Claude setup in one repo: my own skills, a curated library of 350 skills that loads on demand, global CLAUDE.md routing, a project-detection hook, and the list of plugins to install.
 
 ## New machine
 
