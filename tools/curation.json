@@ -1,0 +1,122 @@
+{
+  "_about": "Which skills go into the library. Only ids listed under categories are included; anything new upstream stays out until reviewed. Id = <source>/<skill folder name>.",
+  "sources": {
+    "custom": {"root": "custom", "license": null},
+    "img2threejs": {"root": "img2threejs", "single": true, "license": "img2threejs/LICENSE", "upstream": "https://github.com/img2threejs/img2threejs"},
+    "ecc": {"root": "ecc/skills", "license": "ecc/LICENSE", "upstream": "https://github.com/affaan-m/ECC"},
+    "mattpocock": {"root": "mattpocock-skills/skills/*", "license": "mattpocock-skills/LICENSE", "upstream": "https://github.com/mattpocock/skills"},
+    "ponytail": {"root": "ponytail/skills", "license": "ponytail/LICENSE", "upstream": "https://github.com/DietrichGebert/ponytail"},
+    "marketing": {"root": "coreyhaines-marketing/skills", "license": "coreyhaines-marketing/LICENSE", "upstream": "https://github.com/coreyhaines31/marketingskills"},
+    "strix": {"root": "strix/skills", "license": "strix/LICENSE", "upstream": "https://github.com/usestrix/strix"}
+  },
+  "categories": {
+    "frontend-design": {
+      "title": "Frontend, UI design, motion, accessibility",
+      "skills": ["custom/design-taste-frontend", "custom/motionsites-web-builder", "ecc/make-interfaces-feel-better", "ecc/accessibility", "ecc/motion-foundations", "ecc/motion-patterns", "ecc/motion-advanced", "ecc/liquid-glass-design", "ecc/frontend-slides", "ecc/ui-to-vue", "ecc/i18n-sync"]
+    },
+    "web-frameworks": {
+      "title": "JavaScript/TypeScript web frameworks and tooling",
+      "skills": ["ecc/frontend-patterns", "ecc/react-patterns", "ecc/react-performance", "ecc/react-testing", "ecc/nextjs-turbopack", "ecc/vue-patterns", "ecc/nuxt4-patterns", "ecc/angular-developer", "ecc/vite-patterns", "ecc/bun-runtime", "ecc/typescript-patterns"]
+    },
+    "backend-languages": {
+      "title": "Backend frameworks and language idioms (Node, PHP, Python, Java, .NET, Go, Rust, Ruby, Kotlin, C++, Perl)",
+      "skills": ["ecc/backend-patterns", "ecc/nestjs-patterns", "ecc/laravel-patterns", "ecc/laravel-tdd", "ecc/laravel-verification", "ecc/django-patterns", "ecc/django-celery", "ecc/django-tdd", "ecc/django-verification", "ecc/fastapi-patterns", "ecc/python-patterns", "ecc/python-testing", "ecc/springboot-patterns", "ecc/springboot-tdd", "ecc/springboot-verification", "ecc/java-coding-standards", "ecc/quarkus-patterns", "ecc/quarkus-tdd", "ecc/quarkus-verification", "ecc/dotnet-patterns", "ecc/csharp-testing", "ecc/fsharp-testing", "ecc/golang-patterns", "ecc/golang-testing", "ecc/rust-patterns", "ecc/rust-testing", "ecc/rails-patterns", "ecc/kotlin-patterns", "ecc/kotlin-testing", "ecc/kotlin-ktor-patterns", "ecc/kotlin-exposed-patterns", "ecc/kotlin-coroutines-flows", "ecc/cpp-coding-standards", "ecc/cpp-testing", "ecc/perl-patterns", "ecc/perl-testing", "ecc/error-handling", "ecc/hexagonal-architecture", "ecc/contract-first", "ecc/api-connector-builder", "ecc/content-hash-cache-pattern", "ecc/regex-vs-llm-structured-text", "ecc/generating-python-installer", "ecc/mailtrap-email-integration", "custom/api-architect"]
+    },
+    "mobile": {
+      "title": "Mobile apps (iOS, Android, Flutter, React Native)",
+      "skills": ["custom/mobile-dev", "ecc/swiftui-patterns", "ecc/swift-concurrency-6-2", "ecc/swift-actor-persistence", "ecc/swift-protocol-di-testing", "ecc/foundation-models-on-device", "ecc/ios-icon-gen", "ecc/android-clean-architecture", "ecc/compose-multiplatform-patterns", "ecc/dart-flutter-patterns", "ecc/flutter-dart-code-review", "ecc/react-native-patterns"]
+    },
+    "data-databases": {
+      "title": "Databases, ORMs, migrations, data pipelines",
+      "skills": ["custom/database-architect", "ecc/postgres-patterns", "ecc/mysql-patterns", "ecc/redis-patterns", "ecc/clickhouse-io", "ecc/prisma-patterns", "ecc/jpa-patterns", "ecc/mybatis-patterns", "ecc/database-migrations", "ecc/data-throughput-accelerator", "ecc/data-scraper-agent", "ecc/dashboard-builder"]
+    },
+    "devops-infra": {
+      "title": "DevOps, deployment, servers, networking, homelab",
+      "skills": ["custom/it-infrastructure", "ecc/docker-patterns", "ecc/kubernetes-patterns", "ecc/terraform-patterns", "ecc/deployment-patterns", "ecc/canary-watch", "ecc/homelab-network-setup", "ecc/homelab-network-readiness", "ecc/homelab-pihole-dns", "ecc/homelab-vlan-segmentation", "ecc/homelab-wireguard-vpn", "ecc/cisco-ios-patterns", "ecc/netmiko-ssh-automation", "ecc/network-bgp-diagnostics", "ecc/network-config-validation", "ecc/network-interface-health"]
+    },
+    "testing-quality": {
+      "title": "Testing, QA, performance, production readiness",
+      "skills": ["ecc/e2e-testing", "ecc/browser-qa", "ecc/windows-desktop-e2e", "ecc/godot-testing", "ecc/production-audit", "ecc/benchmark", "ecc/click-path-audit", "ponytail/ponytail-review", "ponytail/ponytail-audit", "mattpocock/setup-pre-commit"]
+    },
+    "security": {
+      "title": "Security testing, pentesting, secure coding",
+      "skills": ["custom/security-audit", "strix/penetration-testing-with-strix", "strix/web-app-penetration-testing", "strix/api-security-testing", "strix/application-security-testing", "strix/owasp-top-10-testing", "strix/find-security-vulnerabilities-in-code", "strix/fix-security-vulnerabilities-with-strix", "strix/ci-security-scanning-with-strix", "strix/managed-pentesting-with-strix", "ecc/web-perimeter-owasp-2025-audit", "ecc/security-bounty-hunter", "ecc/security-review", "ecc/laravel-security", "ecc/django-security", "ecc/rails-security", "ecc/springboot-security", "ecc/quarkus-security", "ecc/perl-security", "ecc/agent-security-hardening", "ecc/defi-amm-security", "ecc/evm-token-decimals", "ecc/nodejs-keccak256", "ecc/hipaa-compliance", "ecc/osint-investigation"]
+    },
+    "reverse-engineering-games-3d": {
+      "title": "Reverse engineering, game research and modding, game engines, 3D",
+      "skills": ["custom/advanced-re", "custom/reverse-engineer-anything", "ecc/leanrea", "custom/game-research", "ecc/godot-patterns", "custom/blender-3d", "ecc/blender-motion-state-inspection", "img2threejs/img2threejs"]
+    },
+    "ai-agents-ml": {
+      "title": "Building AI agents, LLM apps, MCP servers, machine learning",
+      "skills": ["ecc/agent-harness-construction", "ecc/agent-architecture-audit", "ecc/eval-harness", "ecc/cost-aware-llm-pipeline", "ecc/prompt-caching-strategy", "ecc/mcp-server-patterns", "ecc/mcp-dependency-review", "ecc/agent-eval", "ecc/ml-adoption-playbook", "ecc/mle-workflow", "ecc/pytorch-patterns", "ecc/recsys-pipeline-architect"]
+    },
+    "engineering-process": {
+      "title": "Planning, design of code, debugging flow, docs, git, onboarding",
+      "skills": ["ponytail/ponytail", "custom/plan-critic", "mattpocock/grilling", "mattpocock/prototype", "mattpocock/implement", "mattpocock/research", "mattpocock/codebase-design", "mattpocock/domain-modeling", "mattpocock/improve-codebase-architecture", "mattpocock/retro", "mattpocock/wizard", "mattpocock/git-guardrails-claude-code", "ecc/blueprint", "ecc/change-impact", "ecc/intent-driven-development", "ecc/architecture-decision-records", "ecc/inherit-legacy-style", "ecc/codebase-onboarding", "ecc/code-tour", "ecc/search-first", "ecc/git-workflow", "ecc/github-ops", "ecc/issue-review", "ecc/opensource-pipeline", "ecc/documentation-lookup", "ecc/council"]
+    },
+    "marketing-growth": {
+      "title": "Marketing, SEO, ads, copywriting, CRO, content, social",
+      "skills": ["custom/marketing-strategist", "marketing/product-marketing", "marketing/marketing-plan", "marketing/marketing-ideas", "marketing/marketing-council", "marketing/marketing-loops", "marketing/marketing-psychology", "marketing/copywriting", "marketing/copy-editing", "marketing/cro", "marketing/ab-testing", "marketing/signup", "marketing/onboarding", "marketing/popups", "marketing/paywalls", "marketing/pricing", "marketing/offers", "marketing/seo-audit", "marketing/ai-seo", "marketing/programmatic-seo", "marketing/schema", "marketing/site-architecture", "marketing/link-building", "marketing/content-strategy", "marketing/ads", "marketing/ad-creative", "marketing/analytics", "marketing/conversion-tracking", "marketing/attribution", "marketing/emails", "marketing/cold-email", "marketing/sms", "marketing/social", "marketing/video", "marketing/image", "marketing/launch", "marketing/lead-magnets", "marketing/free-tools", "marketing/referrals", "marketing/influencer-marketing", "marketing/community-marketing", "marketing/co-marketing", "marketing/events", "marketing/public-relations", "marketing/directory-submissions", "marketing/aso", "marketing/churn-prevention", "marketing/customer-research", "marketing/competitor-profiling", "marketing/competitors", "marketing/reverse-engineer-marketing", "marketing/prospecting", "marketing/sales-enablement", "marketing/revops", "ecc/content-engine", "ecc/crosspost", "ecc/article-writing", "ecc/brand-voice", "ecc/brand-discovery", "ecc/short-video-distribution", "ecc/x-api"]
+    },
+    "business-product": {
+      "title": "Business strategy, finance, product and project management, fundraising",
+      "skills": ["custom/ceo-advisor", "custom/financial-modeler", "custom/product-manager", "custom/project-manager", "ecc/product-lens", "ecc/market-research", "ecc/investor-materials", "ecc/investor-outreach"]
+    },
+    "media-video": {
+      "title": "Watching videos, making videos and demos",
+      "skills": ["custom/watch", "custom/watch-video", "ecc/video-editing", "ecc/remotion-video-creation", "ecc/manim-video", "ecc/ui-demo"]
+    },
+    "writing-thinking": {
+      "title": "Writing quality, teaching, handoffs, writing for agents",
+      "skills": ["custom/stop-slop", "custom/task-observer", "mattpocock/teach", "mattpocock/handoff", "mattpocock/to-questionnaire", "mattpocock/wait-what", "mattpocock/writing-for-agents"]
+    }
+  },
+  "requires": {
+    "strix/*": "Strix CLI (curl -sSL https://strix.ai/install | bash) and Docker, or a strix cloud account",
+    "custom/reverse-engineer-anything": "REA MCP server",
+    "custom/game-research": "Cheat Engine (and its MCP server for automation)",
+    "custom/blender-3d": "Blender installed",
+    "ecc/blender-motion-state-inspection": "Blender installed",
+    "custom/watch": "yt-dlp and ffmpeg",
+    "custom/watch-video": "ffmpeg",
+    "img2threejs/img2threejs": "Node.js",
+    "ecc/documentation-lookup": "Context7 MCP (authorize via /mcp)",
+    "ecc/x-api": "X (Twitter) API keys",
+    "ecc/mailtrap-email-integration": "Mailtrap account",
+    "ecc/github-ops": "gh CLI signed in",
+    "ecc/issue-review": "gh CLI signed in",
+    "ecc/manim-video": "Python + manim",
+    "ecc/remotion-video-creation": "Node.js + Remotion",
+    "ecc/ui-demo": "Playwright",
+    "ecc/browser-qa": "A browser automation tool (built-in browser, Chrome, or Playwright)",
+    "ecc/windows-desktop-e2e": "Python + pywinauto",
+    "ecc/council": "Subagents (Claude Code only)"
+  },
+  "code_only": ["strix/*", "custom/reverse-engineer-anything", "custom/game-research", "custom/blender-3d", "ecc/blender-motion-state-inspection", "ecc/github-ops", "ecc/issue-review", "ecc/browser-qa", "ecc/windows-desktop-e2e", "ecc/council", "mattpocock/git-guardrails-claude-code", "mattpocock/setup-pre-commit"],
+  "plugin_categories": {
+    "frontend-design": ["frontend-design", "impeccable", "superdesign", "ui-ux-pro-max", "figma", "build-with-wordpress"],
+    "web-frameworks": ["vercel"],
+    "backend-languages": ["modern-python", "modern-cpp", "stripe", "postman", "slack", "atomic-agents"],
+    "data-databases": ["supabase"],
+    "devops-infra": ["sentry"],
+    "testing-quality": ["chrome-devtools-mcp", "mutation-testing", "property-based-testing", "testing-handbook-skills", "coderabbit", "greptile", "second-opinion"],
+    "security": ["agentic-actions-auditor", "audit-context-building", "c-review", "rust-review", "differential-review", "entry-point-analyzer", "semgrep-rule-creator", "sharp-edges", "spec-to-code-compliance", "static-analysis", "supply-chain-risk-auditor", "trailmark", "variant-analysis", "vulnerability-triage-brocards", "yara-authoring"],
+    "engineering-process": ["superpowers", "claude-code-setup", "claude-md-management", "hookify", "plugin-dev", "skill-creator", "atlassian", "claude-mem"]
+  },
+  "account_skills": {
+    "writing-thinking": [
+      ["anthropic-skills:docx", "Create or edit Word documents (.docx)"],
+      ["anthropic-skills:pptx", "Create or edit PowerPoint decks (.pptx)"],
+      ["anthropic-skills:xlsx", "Create or edit Excel spreadsheets (.xlsx)"],
+      ["anthropic-skills:pdf", "Read, fill, merge, or create PDF files"],
+      ["anthropic-skills:docs", "Write living docs in Claude Docs"]
+    ],
+    "business-product": [
+      ["anthropic-skills:deep-research", "Multi-source cited research on a question or market"]
+    ],
+    "frontend-design": [
+      ["anthropic-skills:canvas-design", "Posters, visual art, and static designs as images or PDFs"]
+    ]
+  },
+  "core": ["custom/ceo-advisor", "custom/marketing-strategist", "custom/plan-critic", "custom/it-infrastructure", "custom/blender-3d", "custom/game-research", "custom/advanced-re", "custom/project-manager", "custom/database-architect", "custom/api-architect", "custom/mobile-dev", "custom/product-manager", "custom/financial-modeler", "custom/design-taste-frontend", "custom/motionsites-web-builder", "custom/reverse-engineer-anything", "custom/security-audit", "custom/stop-slop", "custom/watch", "custom/watch-video", "img2threejs/img2threejs", "custom/task-observer"]
+}
