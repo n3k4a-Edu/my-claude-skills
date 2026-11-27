@@ -43,3 +43,12 @@ def plugin(z):
 
 
 write("skill-library-plugin.zip", plugin)
+
+
+def web_plugin(z):
+    # no library/ folder, so the skill reads the latest library from GitHub
+    z.writestr(".claude-plugin/plugin.json", json.dumps(manifest, indent=2))
+    z.write(os.path.join(src, "SKILL.md"), "skills/skill-library/SKILL.md")
+
+
+write("skill-library-web.zip", web_plugin)

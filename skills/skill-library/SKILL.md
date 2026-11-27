@@ -7,7 +7,15 @@ description: Use when starting any project or task, when the work enters a new p
 
 This is a library of 350 curated skills, plus an index of the plugin and account skills. Nothing loads until you pick it. Picking well matters more than picking many: one skill that names the user's exact stack and goal beats five generic ones.
 
-Every path below starts at `library/` inside this skill's base directory. For example, a skill's instructions live at `<base>/library/skills/<name>/INSTRUCTIONS.md`.
+## Where the library is
+
+Every path below is relative to the library root. For example, a skill's instructions live at `<root>/skills/<name>/INSTRUCTIONS.md`.
+
+- **Local copy.** If `library/INDEX.md` exists inside this skill's base directory, the root is that `library/` folder. Read the files directly. This is the normal case in Claude Code, where the folder is kept current with git.
+- **Remote copy.** If there is no local `library/` folder (the slim upload on claude.ai), the root is `https://raw.githubusercontent.com/n3k4a-Edu/my-claude-skills/main/skills/skill-library/library`, which is always the latest version.
+  - Fetch each file with your web fetch tool, or with `curl -sL` in a code sandbox.
+  - To list a skill's extra files, such as references or scripts, call `https://api.github.com/repos/n3k4a-Edu/my-claude-skills/contents/skills/skill-library/library/skills/<name>`.
+  - If GitHub cannot be reached, tell the user in one line. Then work without the library, still applying steps 1–4 to any skills you can load.
 
 ## The recipe
 
